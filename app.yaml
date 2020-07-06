@@ -1,0 +1,15 @@
+runtime: nodejs10
+env: standard
+service: ayudas-contables-home
+
+handlers:
+  - url: /_next
+    static_dir: out/_next
+
+  - url: /(.*\.(json|ico|js))$
+    static_files: out/\1
+    upload: out/.*\.(json|ico|js)$
+
+  - url: .*
+    static_files: out/index.html
+    upload: out/index.html

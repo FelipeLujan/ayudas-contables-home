@@ -1,0 +1,28 @@
+dispatch:
+  # Send all mobile traffic to the mobile frontend.
+  - url: "www.neu.felipelujan.com/*"
+    service: neumorphkit
+
+    # Send all mobile traffic to the mobile frontend.
+  - url: "neu.felipelujan.com/*"
+    service: neumorphkit
+
+  # Send all work to the one static backend.
+  - url: "felipelujan.com/*"
+    service: default
+
+  # Send all work to the one static backend.
+  - url: "www.felipelujan.com/*"
+    service: default
+
+  # Send all work to the one static backend.
+  - url: "www.ayudascontables.com/*"
+    service: ayudas-contables-home
+
+  # Send all work to the one static backend.
+  - url: "ayudascontables.com/*"
+    service: ayudas-contables-home
+
+    # Send all work to the one static backend.
+  - url: "egresos.ayudascontables.com/*"
+    service: comprobantes
